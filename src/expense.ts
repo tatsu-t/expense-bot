@@ -204,7 +204,7 @@ export async function handleInteraction(interaction: Interaction): Promise<void>
           attachment.contentType ?? 'application/octet-stream',
           `経費申請 ${appliedAt} by ${applicant}`,
         );
-        viewUrl = `https://files.c-lab.works/${attachment.name}?key=c-lab`;
+        viewUrl = `https://files.c-lab.works/view/${attachment.name}?key=c-lab`;
       } catch (err) {
         console.error('領収書アップロード失敗:', err);
         await interaction.followUp({
